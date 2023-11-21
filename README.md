@@ -1,20 +1,34 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Portfolio - Next.js
+
+## This repository contains the source code for my portfolio. It includes information about me, my projects, skills, and experiences.
+
+<a href="https://alexcesar.dev" target="_blank">View Live Demo</a>
+
+[//]: # (TODO ADD IMAGE)
+
 ## Getting Started
 
-First, run the development server:
+Ensure that you have Node.js installed on your system.
+
+1. Clone this repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/thealexcesar/portfolio.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Libraries
+
+- **[next](https://nextjs.org/docs/getting-started):** React framework for production.
+- **[react](https://reactjs.org/docs/getting-started.html):** Library for building user interfaces in React.
+- **[react-dom](https://reactjs.org/docs/react-dom.html):** Responsible for rendering the DOM for the web.
+  [//]: # (- **[react-icons]&#40;https://react-icons.github.io/react-icons/&#41;:** Package of icons for React.)
+  [//]: # (- **[sass]&#40;https://sass-lang.com/documentation&#41;:** CSS extension offering powerful features.)
+  [//]: # (- **[framer-motion]&#40;https://www.framer.com/api/motion/&#41;:** Library for fluid and expressive animations in React.)
+
+
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
