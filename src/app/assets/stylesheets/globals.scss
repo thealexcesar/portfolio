@@ -4,11 +4,14 @@
 
 /* Table of Content
 -----------------------------
- * Variables
- * Reset
- * Custom Elements
- * SCSS Style
- * Tailwind Layer Classes
+ - Variables
+ - Reset
+ - Custom Elements
+ - SCSS Style
+
+ - Tailwind Layer Classes
+   - Section Wrapper
+   - Hero Button
 -------------------------- */
 
 /* Variables
@@ -88,6 +91,20 @@ button {
     justify-center
     mx-auto
     items-center;
+  }
+
+  .hero-button {
+    @apply
+    p-2
+    m-1
+    border
+    rounded-full
+    uppercase
+    text-xs
+    tracking-widest
+    text-gray-500
+    transition-all
+    hover:scale-110
   }
 }
 /* End Tailwind Layer Classes --------------------------------------------------------------------------------------- */

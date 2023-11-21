@@ -4,6 +4,7 @@ import React from 'react';
 import { IconType } from 'react-icons';
 
 interface IconProps {
+    ariaLabel?: string;
     color?: string;
     directionRight?: boolean;
     iconRight?: boolean;
@@ -16,6 +17,7 @@ interface IconProps {
 }
 
 function CustomIcon({
+                        ariaLabel,
                         color,
                         iconRight,
                         iconSkill,
@@ -47,11 +49,12 @@ function CustomIcon({
         <div className='group relative flex cursor-pointer' onClick={onClick}>
             <motion.div {...motionProps}>
                 {iconSocialMedia ? (
-                    <Link href={url} target={targetLink || '_blank'} rel="noopener noreferrer" passHref>
+                    <Link href={url} target={targetLink || '_blank'}
+                          rel="noopener noreferrer" aria-label={ariaLabel}
+                    >
                         {iconComponent}
                     </Link>
-                ) : (
-                    <span>{iconComponent}</span>
+                ) : ( <span>{iconComponent}</span>
                 )}
             </motion.div>
         </div>
