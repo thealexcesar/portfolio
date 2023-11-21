@@ -24,9 +24,9 @@ git clone https://github.com/thealexcesar/portfolio.git
 - **[next](https://nextjs.org/docs/getting-started):** React framework for production.
 - **[react](https://reactjs.org/docs/getting-started.html):** Library for building user interfaces in React.
 - **[react-dom](https://reactjs.org/docs/react-dom.html):** Responsible for rendering the DOM for the web.
-  [//]: # (- **[react-icons]&#40;https://react-icons.github.io/react-icons/&#41;:** Package of icons for React.)
-  [//]: # (- **[sass]&#40;https://sass-lang.com/documentation&#41;:** CSS extension offering powerful features.)
-  [//]: # (- **[framer-motion]&#40;https://www.framer.com/api/motion/&#41;:** Library for fluid and expressive animations in React.)
+- **[react-icons](https://react-icons.github.io/react-icons/):** Package of icons for React.
+- **[sass](https://sass-lang.com/documentation):** CSS extension offering powerful features.
+- **[framer-motion](https://www.framer.com/api/motion/):** Library for fluid and expressive animations in React.
 
 
 
