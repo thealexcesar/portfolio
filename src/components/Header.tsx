@@ -27,7 +27,7 @@ function Header() {
     const component: IconType = components[currentIcon];
 
     return (
-        <header className='sticky top-0 p-5 flex items-start z-20
+        <header className='sticky top-0 snap-mandatory p-5 flex items-start z-20
          max-w-7xl mx-auto xl:items-center justify-between text-2xl'
         >
 
