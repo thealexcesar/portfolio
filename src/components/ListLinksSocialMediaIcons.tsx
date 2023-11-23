@@ -1,7 +1,6 @@
 import React, {useRef} from 'react';
 import { FaGitlab, FaGithub, FaLinkedin, FaSquareWhatsapp } from "react-icons/fa6";
-import CustomIcon from "@/components/CustomIcon";
-import customIcon from "@/components/CustomIcon";
+import CustomIcon from "../components/CustomIcon";
 
 type OnClickProps = { onclick?: string }
 const ListLinksSocialMediaIcon: React.FC<OnClickProps> = ({ onclick }) => {

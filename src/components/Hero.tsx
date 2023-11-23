@@ -1,8 +1,8 @@
 'use client'
 import Image from "next/image";
 import {useEffect, useRef} from "react";
-import HeroButton from "@/components/HeroButton";
-import CustomTypewriter from "@/components/CustomTypeWriter";
+import HeroButton from "../components/HeroButton";
+import CustomTypewriter from "../components/CustomTypeWriter";
 
 interface HeroProps {
     locale: string;
