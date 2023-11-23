@@ -1,50 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 # Portfolio - Next.js
 
-## This repository contains the source code for my portfolio. It includes information about me, my projects, skills, and experiences.
+## This is my personal portfolio built with Next.js. It showcases information about me, my projects, skills, and experiences.
 
-<a href="https://alexcesar.dev" target="_blank">View Live Demo</a>
+---
 
+## View Live Demo
+Check out the live version of this portfolio [here](https://alexcesar.dev).
 [//]: # (TODO ADD IMAGE)
 
-## Getting Started
+---
 
-Ensure that you have Node.js installed on your system.
+## Running
 
-1. Clone this repository:
+To get started with this project, follow the steps below:
 
+1. **Clone this repository:**
+
+   ```bash
+   git clone https://github.com/thealexcesar/portfolio.git && cd portfolio
+   ```
+
+2. **Running with Docker:**
+    - Make sure you have Docker installed on your system.
+    - Run the following command to build and start the Docker container:
+      ```bash
+      docker-compose up --build
+      ```
+    - The application will be accessible at [http://localhost:3000](http://localhost:3000).
+
+3. **Running with Yarn:**
+    - Make sure you have Node.js and Yarn installed on your system.
+    - Install dependencies using Yarn:
+      ```bash
+      yarn install
+      ```
+    - Start the application locally:
+      ```bash
+      yarn dev
+      ```
+    - The application will be accessible at [http://localhost:3000](http://localhost:3000).
+
+> **Note:** Before running the application, make sure to set up your GitHub API key. Follow the steps below:
+
+#### Setting Up Your GitHub API Key
+
+To ensure the proper functioning of the application, you'll need to set up your own GitHub API key. Follow the steps below:
+
+1. If you don't have a GitHub API key, create one by following the instructions at [GitHub Developer Settings](https://github.com/settings/developers).
+2. In the project directory, create a file named `.env.local`.
+3. Add your GitHub API key to the `.env.local` file:
 ```bash
-git clone https://github.com/thealexcesar/portfolio.git
+GITHUB_TOKEN=<your_github_token_value_here>
 ```
 
+Remember never to share your API keys publicly.
+
+### Referencing the API Key in Your Code
+
+In your code, where you reference the GitHub API key, you can use environment variables to access the key.
+Ensure you check whether the environment variable is defined before using it to avoid errors.
 
 ## Libraries
 
+- **[dotenv](https://www.npmjs.com/package/dotenv):** Library for fluid and expressive animations in React.
+- **[framer-motion](https://www.framer.com/api/motion/):** Library for fluid and expressive animations in React.
 - **[next](https://nextjs.org/docs/getting-started):** React framework for production.
 - **[react](https://reactjs.org/docs/getting-started.html):** Library for building user interfaces in React.
 - **[react-dom](https://reactjs.org/docs/react-dom.html):** Responsible for rendering the DOM for the web.
 - **[react-icons](https://react-icons.github.io/react-icons/):** Package of icons for React.
 - **[sass](https://sass-lang.com/documentation):** CSS extension offering powerful features.
-- **[framer-motion](https://www.framer.com/api/motion/):** Library for fluid and expressive animations in React.
 
+---
 
+## Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+If you'd like to contribute to this project, please follow these guidelines:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Fork the repository.
+2. Create a new branch: git checkout -b feature/new-feature.
+3. Make your changes and commit them: git commit -m 'Add new feature'.
+4. Push to the branch: git push origin feature/new-feature.
+5. Submit a pull request.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/thealexcesar/portfolio/blob/main/LICENSE) file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
