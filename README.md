@@ -49,12 +49,14 @@ To ensure the proper functioning of the application, you'll need to set up your 
 
 1. If you don't have a GitHub API key, create one by following the instructions at [GitHub Developer Settings](https://github.com/settings/developers).
 2. In the project directory, create a file named `.env.local`.
-3. Add your GitHub API key to the `.env.local` file:
-```bash
+3. Add your GitHub API key to the .env.local file. Open the file and insert the following line:
 GITHUB_TOKEN=<your_github_token_value_here>
-```
 
-Remember never to share your API keys publicly.
+Alternatively, you can use the following command to create the file and append the key:
+```bash
+touch .env.local && echo 'GITHUB_TOKEN=your_github_token_value_here' >> .env.local
+```
+Be cautious not to share your API keys publicly to ensure the security of your account.
 
 ### Referencing the API Key in Your Code
 
