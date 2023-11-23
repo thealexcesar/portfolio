@@ -2,9 +2,9 @@
 import { MdOutgoingMail } from "react-icons/md";
 import {LuMoonStar, LuSunMoon} from "react-icons/lu";
 import CustomIcon from './CustomIcon';
-import ListLinksSocialMediaIcon from "@/components/ListLinksSocialMediaIcons";
+import ListLinksSocialMediaIcon from "../components/ListLinksSocialMediaIcons";
 import {useEffect, useState} from "react";
-import {setThemeFromLocalStorage, toggleTheme} from "@/app/theme";
+import {setThemeFromLocalStorage, toggleTheme} from "../app/theme";
 import {IconType} from "react-icons";
 
 function Header() {

@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import Hero from "@/components/Hero";
-import Header from "@/components/Header";
-import About from "@/components/About";
-import Experience from "@/components/Experience";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Experience from "../components/Experience";
 
 function Home() {
     const components: any[] = [Header, Hero, About, Experience]

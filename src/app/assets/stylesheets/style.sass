@@ -3,8 +3,8 @@
   1.0 Reset
   2.0 Variables
   3.0 Mixins
-  4.0 Light Theme
-  5.0 Dark && Default Theme
+  4.0 Dark Theme
+  5.0 Light Theme
  --------------------------- */
 
 /* Reset
@@ -31,62 +31,56 @@ ul, li, a, button
 /* Variables
   ---------------------------------------------------------------------------------------------- */
 $dark: #383F4BFF
-$light: #f8fafc
-
-$background-end: $dark
-$background-start: #000
-$blue-link-light: #2F81F7FF
-$foreground: $light
+$light: #F8FAFC
 /* End Variables ------------------------------------------------------------------------------- */
 
 /* Mixins
   ---------------------------------------------------------------------------------------------- */
-@mixin theme-styles($color, $border-color, $background-start, $background-end)
-  color: $color
-  background: linear-gradient(to bottom, $background-start, $background-end)
-  transition: background-color 0.2s ease-in-out
+@mixin transition($time: 500ms, $props: all, $timing-function: ease-in-out)
+  -webkit-transition: $props $time $timing-function
+  -moz-transition: $props $time $timing-function
+  -o-transition: $props $time $timing-function
+  transition: $props $time $timing-function
 
-  .border-square,
-  .hero-button,
-  .avatar
-    border-color: $border-color
-    color: $border-color
+@mixin theme-styles($color, $border-color, $background-start, $background-end)
+  body
+    height: 100vh
+    width: 100vw
+    color: $color
+    background: linear-gradient(to bottom, $background-start, $background-end)
+    @include transition(0.2s, color)
+
+    .border-square,
+    .hero-button,
+    .avatar
+      border-color: $border-color
+      color: $border-color
 
     button
       &.hero-button
+        color: $color
+        border: 1px solid #0969DAFF
         &:hover
-          color: #000000
+          color: #FFF
+          background-color: #0969DAFF
+          @include transition()
+
 /* End Mixins ---------------------------------------------------------------------------------- */
 
+/* Dark Theme
+  ---------------------------------------------------------------------------------------------- */
+[data-theme="dark"]
+  $background-end: $dark
+  $background-start: #000
+  $foreground: $light
+  @include theme-styles($foreground, $dark, $background-start, $background-end)
+/* End Dark Theme ------------------------------------------------------------------------------ */
 
 /* Light Theme
   ---------------------------------------------------------------------------------------------- */
 [data-theme="light"]
   $background-end: #FFF
   $background-start: $light
-  $blue-link-light: #2F81F7FF
   $foreground: $dark
-
-  body
-    @include theme-styles($foreground, $dark, $background-start, $background-end)
+  @include theme-styles($foreground, $light, $background-start, $background-end)
 /* End Light Theme ----------------------------------------------------------------------------- */
-
-/* Dark && Default Theme
-  ---------------------------------------------------------------------------------------------- */
-body
-  height: 100vh
-  width: 100vw
-  @include theme-styles($foreground, $dark, $background-start, $background-end)
-
-  .border-square,
-  .hero-button,
-  .avatar
-    border-color: $light
-    color: $light
-
-    button
-      &.hero-button
-        &:hover
-          background-color: $blue-link-light
-          color: #F5F5F5FF
-/* End Dark && Default Theme ------------------------------------------------------------------- */
