@@ -7,11 +7,14 @@
  - Variables
  - Reset
  - Custom Elements
+
  - SCSS Style
+     - Dark Theme && Default
+     - Light Theme
 
  - Tailwind Layer Classes
-   - Section Wrapper
-   - Hero Button
+     - Section Wrapper
+     - Hero Button
 -------------------------- */
 
 /* Variables
@@ -50,6 +53,40 @@ ul, li, a, button {
 
 /* SCSS Style
 --------------------------------------------------------------------------------------------------------------------- */
+/* Light Theme
+----------------------------------------- */
+  [data-theme="light"] {
+    $background-end: $light;
+    $background-start: #F1F5F9FF;
+    $blue-link-light: #2F81F7FF;
+    $foreground: $dark;
+
+    body {
+      color: $foreground;
+      background: linear-gradient(to bottom, $background-start, $background-end);
+      transition: background-color 0.2s ease-in-out;
+    }
+
+  .border-square,
+  .hero-button,
+  .avatar {
+    border-color:$dark;
+    color:$dark;
+  }
+
+  button {
+
+    .hero-button {
+      &:hover {
+        color: #000000;
+      }
+    }
+  }
+}
+/* End Light Theme ---------------------- */
+
+/* Dark Theme && Default
+----------------------------------------- */
 body {
   height: 100vh;
   width: 100vw;
@@ -74,6 +111,8 @@ button {
     }
   }
 }
+/* End Dark Theme ----------------------- */
+
 /* End SCSS Style --------------------------------------------------------------------------------------------------- */
 
 /* Tailwind Layer Classes
