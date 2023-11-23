@@ -24,8 +24,7 @@ const Hero: React.FC<HeroProps> = (props) => {
 
     const buttons = {
         delay: [0.1, 0.3, 0.6, 0.9],
-        // content: ['about', 'experience', 'skills', 'projects', 'contact']
-        content: []
+        buttons: ['about', 'experience']
     }
 
     return (
@@ -50,7 +49,7 @@ const Hero: React.FC<HeroProps> = (props) => {
                 </div>
 
                 <div className='mx-auto max-w-7xl flex flex-wrap justify-center'>
-                    {buttons.content.map((content, index) => (
+                    {buttons.buttons.map((content, index) => (
                         <HeroButton key={index} delay={buttons.delay[index]} content={content} />
                     ))}
                 </div>
