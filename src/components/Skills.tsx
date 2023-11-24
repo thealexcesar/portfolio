@@ -7,14 +7,10 @@ import {iconMap} from "../app/IconMap";
 function Skills() {
     const Skills: string[] = [
         'Ruby on Rails',
+        'JQuery',
         'Postgresql',
-        'JavaScript',
-        'React',
-        'Sass',
-        'TypeScript',
-        'Mongodb',
-        'Java',
-        // 'Angular'
+        'Redis',
+        'React'
     ];
 
     return (
@@ -37,7 +33,7 @@ function Skills() {
                             })}
                         </div>
                     </div>
-                    <IconsFetchGithubSkills/>
+                    <IconsFetchGithubSkills />
                 </div>
             </motion.div>
         </section>
