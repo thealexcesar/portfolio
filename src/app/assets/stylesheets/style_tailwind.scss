@@ -53,5 +53,17 @@
   .layout-image {
     @apply w-full md:h-[700px] h-[200px] hover:opacity-80 object-contain rounded-md px-8
   }
+
+  .skills-wrapper {
+    @apply flex flex-col justify-start items-center
+  }
+
+  .skills-subtitle {
+    @apply text-center tracking-[3px] text-sm opacity-[0.7]
+  }
+
+  .skills-content {
+    @apply h-full flex flex-wrap justify-center my-auto items-center mt-12
+  }
 }
 /* End Components ------------------------------------------------------------------------------ */

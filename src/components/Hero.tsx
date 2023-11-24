@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = (props) => {
 
     const buttons = {
         delay: [0.1, 0.3, 0.6, 0.9],
-        buttons: ['about', 'experience']
+        buttons: ['about', 'experience', 'skills']
     }
 
     return (
