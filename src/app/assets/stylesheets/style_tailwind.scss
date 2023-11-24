@@ -51,7 +51,11 @@
   }
 
   .layout-image {
-    @apply w-full md:h-[700px] h-[200px] hover:opacity-80 object-contain rounded-md px-8
+    @apply w-full md:h-[700px] h-[200px] hover:opacity-80 object-contain rounded-md max-h-72
+  }
+
+  .layout-subtitle {
+    @apply text-xl md:text-4xl lg:text-5xl font-semibold lg:text-left text-left
   }
 
   .skills-wrapper {
