@@ -6,6 +6,7 @@ require('dotenv').config();
 const nextConfig = {
     ...images,
     env: { GITHUB_TOKEN: process.env.GITHUB_TOKEN },
+    reactStrictMode: true,
 }
 
 module.exports = nextConfig
