@@ -16,7 +16,7 @@ function Skills() {
     return (
         <section id='skills' className='snap-center'>
             <motion.div className='section-wrapper'>
-                <h2 className='section-title'>skills</h2>
+                <h2 className='section-title mt-20'>skills</h2>
                 <div className='flex flex-col justify-around items-center my-auto w-full'>
                     <div className="skills-wrapper h-4/6 mt-24">
                         <div className='skills-content'>
