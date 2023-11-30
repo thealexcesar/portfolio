@@ -14,11 +14,11 @@ function Skills() {
     ];
 
     return (
-        <section id='skills' className='snap-center'>
-            <motion.div className='section-wrapper'>
-                <h2 className='section-title mt-20'>skills</h2>
+        <section id='skills' className='snap-center h-5/6'>
+            <motion.div className='section-wrapper flex-col'>
+                <h2 className='section-title'>skills</h2>
                 <div className='flex flex-col justify-around items-center my-auto w-full'>
-                    <div className="skills-wrapper h-4/6 mt-24">
+                    <div className="skills-wrapper">
                         <div className='skills-content'>
                             {Skills.map((skill, index) => {
                                 const iconSkill = iconMap[skill];

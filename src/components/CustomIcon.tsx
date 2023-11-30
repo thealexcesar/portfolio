@@ -10,10 +10,11 @@ interface IconProps {
     iconRight?: boolean;
     iconSkill?: IconType;
     iconSocialMedia?: IconType;
+    isBtn?: boolean;
+    onClick?: () => void;
     targetLink?: string;
     title?: string;
     url?: string;
-    onClick?: () => void;
 }
 
 function CustomIcon({
@@ -22,7 +23,9 @@ function CustomIcon({
                         iconRight,
                         iconSkill,
                         iconSocialMedia,
+                        isBtn = false,
                         targetLink,
+                        title,
                         url = '/',
                         onClick
                     }: IconProps) {
@@ -47,8 +50,8 @@ function CustomIcon({
 
     return (
         <div className='group relative flex cursor-pointer' onClick={onClick}>
-            <motion.div {...motionProps}>
-                {iconSocialMedia ? (
+            <motion.div {...motionProps} title={title}>
+                {iconSocialMedia && !isBtn ? (
                     <Link href={url} target={targetLink || '_blank'}
                           rel="noopener noreferrer" aria-label={ariaLabel}
                     >

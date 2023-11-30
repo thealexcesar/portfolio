@@ -7,6 +7,15 @@ const nextConfig = {
     ...images,
     env: { GITHUB_TOKEN: process.env.GITHUB_TOKEN },
     reactStrictMode: true,
+    async redirects() {
+        return [
+            {
+                source: '/',
+                destination: '/pt',
+                permanent: true,
+            },
+        ];
+    },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

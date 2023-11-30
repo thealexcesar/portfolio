@@ -6,12 +6,19 @@ import ListLinksSocialMediaIcon from "../components/ListLinksSocialMediaIcons";
 import {useEffect, useState} from "react";
 import {setThemeFromLocalStorage, toggleTheme} from "../app/theme";
 import {IconType} from "react-icons";
+import {Locale} from "../../i18n.config";
+import SwitchLanguage from "@/components/SwitchLanguage";
 
-function Header() {
+interface HeaderProps {
+    lang: Locale;
+    translate: {
+        send_me_an_email: string | null
+    }
+}
+function Header(props: HeaderProps) {
     const [currentIcon, setCurrentIcon] = useState(LuSunMoon);
 
     useEffect(() => { setThemeFromLocalStorage() }, []);
-
     useEffect(() => {
         const root: HTMLElement = document.documentElement;
         const isDark: boolean = root.classList.contains('dark');
@@ -39,10 +46,10 @@ function Header() {
                     iconSocialMedia={MdOutgoingMail}
                     url='mailto:alex.cesar505@icloud.com'
                     iconRight={true} targetLink='_self'
-                    ariaLabel='Send me an Email'
+                    ariaLabel={props.translate?.send_me_an_email  || ''}
                 />
 
-                <div className='cursor-pointer flex' title='Switch theme'onClick={handleThemeToggle}> {' '}
+                <div className='cursor-pointer flex' title='Switch theme' onClick={handleThemeToggle}> {' '}
                     <CustomIcon
                         iconSocialMedia={component}
                         targetLink='_self'
@@ -51,6 +58,8 @@ function Header() {
                         ariaLabel='Switch Theme'
                     />
                 </div>
+
+                <CustomIcon iconSocialMedia={SwitchLanguage} iconRight={true} isBtn={true} />
 
             </div>
         </header>

@@ -17,7 +17,8 @@
 @layer components {
   .section-wrapper {
     @apply
-    flex flex-col
+    flex
+    flex-col
     relative
     h-screen
     text-center md:text-left
@@ -41,7 +42,6 @@
     uppercase
     text-xs
     tracking-widest
-    text-gray-500
     transition-all
     hover:scale-110
   }
