@@ -65,6 +65,15 @@ $light: #F8FAFC
           background-color: $color
           @include transition()
 
+    ul.dropdown
+      background-color: $background-start
+      border: 1px solid $color
+      border-radius: 4px
+      color: $color
+      & > li:hover
+        background-color: $color
+        color: $background-start
+        filter: brightness(1.1)
 /* End Mixins ---------------------------------------------------------------------------------- */
 
 /* Dark Theme
