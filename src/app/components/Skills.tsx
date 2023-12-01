@@ -2,7 +2,7 @@
 import {motion} from "framer-motion";
 import CustomIcon from "./CustomIcon";
 import IconsFetchGithubSkills from "./IconsFetchGithubSkills";
-import {iconMap} from "../app/IconMap";
+import {iconMap} from "@/core/utils/IconMap";
 
 function Skills() {
     const Skills: string[] = [

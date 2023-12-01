@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CustomIcon from "./CustomIcon";
-import { iconMap } from "../app/IconMap";
-import githubAPI from "../app/githubAPI";
+import {iconMap} from "@/core/utils/IconMap";
+import githubAPI from "@/core/domain/githubAPI";
 
 interface LanguageInfo {
     language: string;

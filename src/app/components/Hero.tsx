@@ -1,11 +1,11 @@
 'use client'
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import HeroButton from "../components/HeroButton";
-import CustomTypewriter from "../components/CustomTypeWriter";
-import { Locale } from "../../i18n.config";
+import HeroButton from "./HeroButton";
+import CustomTypewriter from "./CustomTypeWriter";
+import {Locale} from "../../../i18n.config";
 
-interface HeroProps {
+type HeroProps = {
     lang: Locale;
     hero: string[];
 }

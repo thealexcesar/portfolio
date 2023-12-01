@@ -1,8 +1,8 @@
 'use client'
 import type {Metadata} from 'next';
 import {Inter} from 'next/font/google';
-import './assets/stylesheets/style_tailwind.scss';
-import './assets/stylesheets/style.sass';
+import '@/app/assets/stylesheets/style_tailwind.css';
+import '@/app/assets/stylesheets/style.sass';
 import { usePathname } from "next/navigation";
 
 // import { useNavigation } from 'next/navigation';

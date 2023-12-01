@@ -29,7 +29,7 @@ const CustomTypewriter: React.FC<TWProps> = (
                     clearInterval(interval);
                     setTimeout(() => {
                         setCurrentText('');
-                        !!(loop || textIndex < content.length - 1) && setTextIndex(
+                        loop || textIndex < content.length - 1 && setTextIndex(
                             prevIndex => (prevIndex < content.length - 1 ? prevIndex + 1 : 0)
                         );
                     }, delay);
