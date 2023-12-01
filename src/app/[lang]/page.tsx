@@ -9,31 +9,21 @@ import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 
 function Home({ params: { lang } }: { params: { lang: Locale } }) {
-    const [t, setT] = useState<{
-        about: string | null;
-        about_content: string | null;
-        presentation: string | null;
-        welcome: string | null
-        send_me_an_email: string | null
-    }>({});
-    useEffect(() => {
-        async function fetchDictionary() {
-            try {
-                const dict = await getDictionary(lang);
-                setT(dict);
-            } catch (error) {
-                console.error('Error fetching dictionary:', error);
-            }
-        }
-        fetchDictionary();
-    }, [lang]);
+    const [t, setT] = useState({
+        about: 'Sobre',
+        most_used_on_github: 'Mais usados do Github',
+        about_content: 'Sobre conteudo',
+        presentation: 'Apresentação',
+        send_me_an_email: 'Envie-me um e-mail',
+        welcome: 'Bem-vindo!',
+    });
 
     const components = [
         <Header key="header" lang={lang} translate={t} />,
         <Hero key="hero" lang={lang} translate={t} />,
         <About key="about" lang={lang} translate={t} />,
-        <Experience key="experience" lang={lang} translate={t} />,
-        <Skills key="skills" lang={lang} translate={t} />,
+        // <Experience key="experience" lang={lang} translate={t} />,
+        // <Skills key="skills" lang={lang} translate={t} />,
     ];
 
     return (
