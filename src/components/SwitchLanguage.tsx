@@ -14,13 +14,12 @@ function SwitchLanguage() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
 
     const redirectedPathName = (locale: string) => {
-        if (!pathName) return i18n.defaultLocale;
+        if (!pathName) return `/${i18n.defaultLocale}`;
         const segments = pathName.split("/");
         segments[1] = locale;
         return segments.join("/");
     };
 
-    console.log('path: ', pathName)
     const handleDropdownToggle = () => {
         setDropdownOpen(!isDropdownOpen);
     };
@@ -34,7 +33,7 @@ function SwitchLanguage() {
     return (
         <div className="relative inline-block">
             <i
-                role='button'
+                role="button"
                 onClick={handleDropdownToggle}
                 className="relative"
                 title={pathName === "/en" ? "Language" : "Idioma"}
@@ -52,7 +51,7 @@ function SwitchLanguage() {
                             {locale === "pt" && <GiBrazilFlag size={18} />}
                             {locale === "en" && <FaFlagUsa size={18} />}
                             {locale === "es" && <IoMdFlag size={18} />}
-                            <Link href={redirectedPathName(locale)} aria-label={`Switch language to ${locale}`} >
+                            <Link href={redirectedPathName(locale)} aria-label={`Switch language to ${locale}`}>
                                 <span className="ml-2">{currentLanguageLabels[locale] || ""}</span>
                             </Link>
                         </li>

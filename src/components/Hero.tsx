@@ -28,8 +28,6 @@ const Hero: React.FC<HeroProps> = (props) => {
 
     const contentHero = [props.hero[0] || '', props.hero[1] || ''];
     const currentLang = props?.lang === 'en' || props?.lang === 'es' ? props?.lang : 'pt';
-    console.log("TESTE", buttons.translateButtons[currentLang][0])
-    console.log('lang: ', currentLang)
     return (
         <section id='hero' className='snap-start'>
             <div ref={heroRef} className='h-screen flex flex-col items-center justify-center space-y-2 p-2 overflow-hidden'>

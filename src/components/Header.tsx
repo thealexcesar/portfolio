@@ -10,10 +10,7 @@ import {Locale} from "../../i18n.config";
 import SwitchLanguage from "@/components/SwitchLanguage";
 
 interface HeaderProps {
-    lang: Locale;
-    translate: {
-        send_me_an_email: string | null
-    }
+    // lang: Locale;
 }
 function Header(props: HeaderProps) {
     const [currentIcon, setCurrentIcon] = useState(LuSunMoon);
@@ -46,7 +43,7 @@ function Header(props: HeaderProps) {
                     iconSocialMedia={MdOutgoingMail}
                     url='mailto:alex.cesar505@icloud.com'
                     iconRight={true} targetLink='_self'
-                    ariaLabel={props.translate?.send_me_an_email  || ''}
+                    // ariaLabel={props.translate?.send_me_an_email  || ''}
                 />
 
                 <div className='cursor-pointer flex' title='Switch theme' onClick={handleThemeToggle}> {' '}

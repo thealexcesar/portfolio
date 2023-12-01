@@ -11,5 +11,5 @@
 */
 export const es = {
   about: ["about", 'hello'],
-  hero: ["Welcome to my Portfolio...", "I'm a Full-Stack Developer"],
+  hero: ["Bienvenido a mi portafolio...", "Soy un Programador Full-Stack"],
 };

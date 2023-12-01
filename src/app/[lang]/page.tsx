@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import { Locale } from "../../../i18n.config";
 import Hero from "@/components/Hero";
 import { getDictionary } from "../getDictionaries";
+import Header from "@/components/Header";
+import Experience from "@/components/Experience";
+import Skills from "@/components/Skills";
 
 interface TranslationsProps {
     hero: string[];
@@ -34,8 +37,13 @@ function Home({ params: { lang } }: HomeProps, props: TranslationsProps) {
     }, [lang]);
 
     return (
-        <main className="h-screen snap-y snap snap-mandatory overflow-x-scroll scrollbar z-0 overflow-y-scroll scrollbar-track-gray-400/20 scrollbar-thumb-gray-400/80">
+        <main lang={lang} className="h-screen snap-y snap snap-mandatory overflow-x-scroll scrollbar z-0
+         overflow-y-scroll scrollbar-track-gray-400/20 scrollbar-thumb-gray-400/80"
+        >
+            <Header key='header' />
             <Hero lang={lang} hero={translations.hero} />
+            <Experience key='experience' />
+            <Skills key='skills' />
         </main>
     );
 }
