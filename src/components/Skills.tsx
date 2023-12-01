@@ -33,7 +33,7 @@ function Skills() {
                             })}
                         </div>
                     </div>
-                    <IconsFetchGithubSkills most_used={''} />
+                    <IconsFetchGithubSkills />
                 </div>
             </motion.div>
         </section>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 interface TWProps {
-    texts: string[];
+    content: string[];
     classes?: string;
     speed?: number;
     delay?: number;
@@ -10,7 +10,7 @@ interface TWProps {
 }
 
 const CustomTypewriter: React.FC<TWProps> = (
-    {texts, speed = 100, delay = 900, cursor = true, loop = true, classes = ''}
+    {content, speed = 100, delay = 900, cursor = true, loop = true, classes = ''}
 ) => {
 
     const [currentText, setCurrentText] = useState<string>('');
@@ -18,8 +18,8 @@ const CustomTypewriter: React.FC<TWProps> = (
 
     useEffect(() => {
         let interval: NodeJS.Timeout;
-        if (textIndex < texts.length) {
-            const text = texts[textIndex];
+        if (textIndex < content.length) {
+            const text = content[textIndex];
             let i = 0;
             interval = setInterval(() => {
                 if (i <= text.length) {
@@ -29,15 +29,15 @@ const CustomTypewriter: React.FC<TWProps> = (
                     clearInterval(interval);
                     setTimeout(() => {
                         setCurrentText('');
-                        !!(loop || textIndex < texts.length - 1) && setTextIndex(
-                            prevIndex => (prevIndex < texts.length - 1 ? prevIndex + 1 : 0)
+                        !!(loop || textIndex < content.length - 1) && setTextIndex(
+                            prevIndex => (prevIndex < content.length - 1 ? prevIndex + 1 : 0)
                         );
                     }, delay);
                 }
             }, speed);
         }
         return () => clearInterval(interval);
-    }, [textIndex, texts, speed, delay, loop]);
+    }, [textIndex, content, speed, delay, loop]);
 
     const cursorStyle: React.CSSProperties = {
         borderRight: cursor ? '1px solid' : 'none',

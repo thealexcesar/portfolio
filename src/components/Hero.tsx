@@ -1,4 +1,4 @@
-// Componente Hero
+'use client'
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import HeroButton from "../components/HeroButton";
@@ -7,10 +7,7 @@ import { Locale } from "../../i18n.config";
 
 interface HeroProps {
     lang: Locale;
-    translate: {
-        presentation: string | null;
-        welcome: string | null;
-    };
+    hero: string[];
 }
 
 const Hero: React.FC<HeroProps> = (props) => {
@@ -21,38 +18,46 @@ const Hero: React.FC<HeroProps> = (props) => {
 
     const buttons = {
         delay: [0.1, 0.3, 0.6, 0.9],
-        buttons: ['about', 'experience', 'skills'],
+        names: ['about', 'experience', 'skills'],
+        translateButtons: {
+            "en": ['about', 'experience', 'skills'],
+            "es": ['sobre', 'experiencia', 'habilidades'],
+            "pt": ['sobre', 'experiência', 'habilidades']
+        }
     };
 
-    const texts = [
-        props.translate?.welcome || '',
-        props.translate?.presentation || '',
-    ];
-
+    const contentHero = [props.hero[0] || '', props.hero[1] || ''];
+    const currentLang = props?.lang === 'en' || props?.lang === 'es' ? props?.lang : 'pt';
+    console.log("TESTE", buttons.translateButtons[currentLang][0])
+    console.log('lang: ', currentLang)
     return (
         <section id='hero' className='snap-start'>
             <div ref={heroRef} className='h-screen flex flex-col items-center justify-center space-y-2 p-2 overflow-hidden'>
-        <span>
-          <Image
-              src='/default_avatar.png'
-              alt="Alex's image profile"
-              height={800}
-              width={800}
-              className='rounded-md object-contain text-center border-white-500'
-          />
-        </span>
+                <span>
+                    <Image
+                        src='/default_avatar.png'
+                        alt="Alex's image profile"
+                        height={800}
+                        width={800}
+                        className='rounded-md object-contain text-center border-white-500'
+                    />
+                </span>
 
                 <h2 className='text-xs uppercase tracking-[4px] mt-4'>Alex Cesar</h2>
 
                 <div className='h-10 z-10 mt-4'>
-          <span className='lg:text-2xl font-semibold scroll-px-10'>
-            <CustomTypewriter texts={texts} classes='lg:text-4xl font-semibold scroll-px-10' />
-          </span>
+                    <span className='lg:text-2xl font-semibold scroll-px-10'>
+                        <CustomTypewriter content={contentHero} classes='lg:text-4xl font-semibold scroll-px-10' />
+                    </span>
                 </div>
 
                 <div className='mx-auto max-w-7xl flex flex-wrap justify-center'>
-                    {buttons.buttons.map((content, index) => (
-                        <HeroButton key={index} delay={buttons.delay[index]} content={content} />
+                    {buttons.names.map((content, i) => (
+                        <HeroButton
+                            key={i}
+                            delay={buttons.delay[i]}
+                            content={buttons.translateButtons[currentLang][i] || content}
+                        />
                     ))}
                 </div>
             </div>
