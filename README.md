@@ -4,6 +4,9 @@
 
 ---
 
+### Release
+**0.0.2**
+
 ## View Live Demo
 Check out the live version of this portfolio [here](https://alexcesar.dev).
 

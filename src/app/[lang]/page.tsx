@@ -44,7 +44,7 @@ function Home({ params: { lang } }: IProps) {
         >
             <Header key="header" labels={translations.labels} />
             <Hero lang={lang} hero={translations.hero} />
-            <About lang about={translations.about} />
+            <About about={translations.about} />
             <Experience experience={translations.experience} skills={translations.skills} />
             <Skills />
         </main>
