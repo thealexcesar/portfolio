@@ -1,16 +1,16 @@
 'use client'
 import { MdOutgoingMail } from "react-icons/md";
 import {LuMoonStar, LuSunMoon} from "react-icons/lu";
-import CustomIcon from './CustomIcon';
-import ListLinksSocialMediaIcon from "../components/ListLinksSocialMediaIcons";
 import {useEffect, useState} from "react";
-import {setThemeFromLocalStorage, toggleTheme} from "../app/theme";
 import {IconType} from "react-icons";
-import {Locale} from "../../i18n.config";
-import SwitchLanguage from "@/components/SwitchLanguage";
+import SwitchLanguage from "@/app/components/ui/SwitchLanguage";
+import {setThemeFromLocalStorage, toggleTheme} from "@/core/ui/theme";
+import ListLinksSocialMediaIcon from "@/app/components/ListLinksSocialMediaIcons";
+import CustomIcon from "@/app/components/CustomIcon";
+import {IDictionaries} from "@/core/interfaces/props.interface";
 
 interface HeaderProps {
-    // lang: Locale;
+    labels: IDictionaries['labels'];
 }
 function Header(props: HeaderProps) {
     const [currentIcon, setCurrentIcon] = useState(LuSunMoon);
@@ -35,7 +35,7 @@ function Header(props: HeaderProps) {
          max-w-7xl mx-auto xl:items-center justify-between text-2xl'
         >
 
-            <ListLinksSocialMediaIcon />
+            <ListLinksSocialMediaIcon labels={props?.labels} />
 
             <div className='flex justify-end space-x-2'>
 

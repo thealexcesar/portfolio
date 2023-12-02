@@ -4,6 +4,9 @@
 
 ---
 
+### Release
+**0.0.2**
+
 ## View Live Demo
 Check out the live version of this portfolio [here](https://alexcesar.dev).
 
@@ -24,7 +27,12 @@ To get started with this project, follow the steps below:
 2. **Running with Docker:**
     - Make sure you have Docker installed on your system.
     - Run the following command to build and start the Docker container:
-      ```bash
+      ```bash 
+      docker build -t portfolio .
+      docker run -it -p 3000:3000 -v .:/usr/src/app portfolio
+      ```
+      or using docker-compose
+    - ```bash
       docker-compose up --build
       ```
     - The application will be accessible at [http://localhost:3000](http://localhost:3000).

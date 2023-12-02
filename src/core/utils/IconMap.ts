@@ -29,5 +29,5 @@ export const iconMap: IconMapping = {
     Sass:            createIcon(FaSass, '#C69'),
     Shell:           createIcon(TbBrandPowershell, ''),
     TypeScript:      createIcon(BiLogoTypescript, '#007ACC'),
-    'Ruby on Rails': createIcon(SiRubyonrails, '#CC342D')
+    'Ruby on Rails': createIcon(SiRubyonrails, '#CC342D'),
 };

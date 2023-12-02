@@ -55,7 +55,7 @@
   }
 
   .layout-subtitle {
-    @apply text-xl md:text-4xl lg:text-5xl font-semibold lg:text-left text-left
+    @apply text-xl md:text-4xl lg:text-5xl font-semibold lg:text-left text-left mt-4
   }
 
   .skills-wrapper {
