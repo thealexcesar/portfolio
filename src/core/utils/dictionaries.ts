@@ -1,6 +1,6 @@
 
 import {i18n, Locale} from "../../../i18n.config";
-import {ISetDictionaries, IGetDictionaries} from "@/core/interfaces/props.interface";
+import {IDictionaries, IGetDictionaries} from "@/core/interfaces/props.interface";
 
 
 const languages = ['en', 'pt', 'es'];
@@ -24,7 +24,7 @@ export function redirectedPathName(pathName: string) {
     return segments.join("/");
 };
 
-export const getDictionary = async (lang: Locale): Promise<ISetDictionaries> => {
+export const getDictionary = async (lang: Locale): Promise<IDictionaries> => {
     lang = invalidPathFromUrl(lang);
     return await dictionaries[lang]();
 };
