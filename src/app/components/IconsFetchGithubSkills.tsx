@@ -3,7 +3,11 @@ import CustomIcon from "./CustomIcon";
 import {iconMap} from "@/core/utils/IconMap";
 import githubAPI from "@/core/domain/githubAPI";
 
-function IconsFetchGithubSkills() {
+interface GithubProps {
+    onGithub: string
+}
+
+function IconsFetchGithubSkills(props: GithubProps) {
     const [languages, setLanguages] = useState<IGithubTechnologies[]>([]);
 
     useEffect(() => {
@@ -21,7 +25,7 @@ function IconsFetchGithubSkills() {
 
     return (
         <div className={'skills-wrapper h-3/6 mt-12'}>
-            <h3 className='skills-subtitle uppercase'>Most Used on GitHub</h3>
+            <h3 className='skills-subtitle uppercase'>{props?.onGithub}</h3>
             <div className='skills-content'>
                 {languages.map(({ language, contributions, percentage }) => {
                     const iconSkill = iconMap[language];

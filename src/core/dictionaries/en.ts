@@ -3,6 +3,11 @@ export const en = {
         "About", "A Little ", "About Me.",
         "I am a full-stack web developer with 2 years of experience in Ruby on Rails, JavaScript, PostgreSQL, and SASS. I am passionate about technology and believe it can be used to improve people's lives. I am always looking for ways to use my skills to create useful and engaging projects."
     ],
+    content: [
+        "Alex's Portfolio",
+        "Web Developer, full-stack, Ruby on Rails, JavaScript, PostgreSQL, SASS",
+        "Alex Cesar - Full-Stack Web Developer and Computer Engineering student",
+    ],
     experience: [
         "Experience",
         "Full-Stack Developer",
@@ -18,6 +23,7 @@ export const en = {
         'Visit my Linkedin to view my resume',
         "Let\'s Talk on Whatsapp"
     ],
+    onGithub: "Most Used on GitHub",
     skills: "Skills"
 };
 

@@ -47,6 +47,6 @@ const CustomTypewriter: React.FC<Props> = (
     };
 
     return <h2 className={classes} style={cursorStyle}> {currentText} </h2>;
-};
+}
 
 export default CustomTypewriter;
