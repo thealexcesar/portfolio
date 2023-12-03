@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
-interface TWProps {
+interface Props {
     content: string[];
     classes?: string;
     speed?: number;
@@ -8,19 +7,19 @@ interface TWProps {
     cursor?: boolean;
     loop?: boolean;
 }
-
-const CustomTypewriter: React.FC<TWProps> = (
-    {content, speed = 100, delay = 900, cursor = true, loop = true, classes = ''}
+const CustomTypewriter: React.FC<Props> = (
+    { content, speed = 100, delay = 900, cursor = true, loop = true, classes = '' }
 ) => {
-
     const [currentText, setCurrentText] = useState<string>('');
     const [textIndex, setTextIndex] = useState<number>(0);
 
     useEffect(() => {
         let interval: NodeJS.Timeout;
+
         if (textIndex < content.length) {
             const text = content[textIndex];
             let i = 0;
+
             interval = setInterval(() => {
                 if (i <= text.length) {
                     setCurrentText(text.substring(0, i));
@@ -29,9 +28,11 @@ const CustomTypewriter: React.FC<TWProps> = (
                     clearInterval(interval);
                     setTimeout(() => {
                         setCurrentText('');
-                        loop || textIndex < content.length - 1 && setTextIndex(
-                            prevIndex => (prevIndex < content.length - 1 ? prevIndex + 1 : 0)
-                        );
+                        if (loop || textIndex < content.length - 1) {
+                            setTextIndex(prevIndex => (prevIndex < content.length - 1 ? prevIndex + 1 : 0))
+                        } else {
+                            setTextIndex(textIndex + 1);
+                        }
                     }, delay);
                 }
             }, speed);
@@ -42,10 +43,10 @@ const CustomTypewriter: React.FC<TWProps> = (
     const cursorStyle: React.CSSProperties = {
         borderRight: cursor ? '1px solid' : 'none',
         display: 'inline-block',
-        animation: '1s step-end infinite'
+        animation: '1s step-end infinite',
     };
 
-    return <h2 className={classes} style={cursorStyle}> {currentText} </h2>
+    return <h2 className={classes} style={cursorStyle}> {currentText} </h2>;
 };
 
 export default CustomTypewriter;

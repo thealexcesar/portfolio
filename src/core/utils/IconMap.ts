@@ -6,7 +6,7 @@ import {SiCplusplus, SiCoffeescript, SiRedis, SiRubyonrails } from "react-icons/
 import { TbBrandPowershell } from "react-icons/tb";
 import { FaGitAlt } from "react-icons/fa6";
 
-interface IconMapping { [key: string]: {  icon: IconType; color: string; }}
+interface IconMapping { [key: string]: { icon: IconType; color: string; }}
 const createIcon = (icon: IconType, color: string = ''): { icon: IconType; color: string;} => {
     return { icon, color};
 };

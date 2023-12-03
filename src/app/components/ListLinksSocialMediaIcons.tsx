@@ -1,9 +1,12 @@
 import React from 'react';
 import { FaGitlab, FaGithub, FaLinkedin, FaSquareWhatsapp } from "react-icons/fa6";
 import CustomIcon from "./CustomIcon";
-import { IDictionaries } from "@/core/interfaces/props.interface";
 
-function ListLinksSocialMediaIcon({ onclick, labels }: { onclick?: string; labels: IDictionaries['labels'] }) {
+interface LinksProps {
+    labels: string[];
+    onclick?: string
+}
+function ListLinksSocialMediaIcon(props: LinksProps) {
     const customIcons = {
         iconSocialMedias: [FaGithub, FaGitlab, FaLinkedin, FaSquareWhatsapp],
         urlPaths: [
@@ -23,7 +26,7 @@ function ListLinksSocialMediaIcon({ onclick, labels }: { onclick?: string; label
                     key={i}
                     url={customIcons.urlPaths[i]}
                     color={customIcons.colors[i]}
-                    ariaLabel={labels[i]}
+                    ariaLabel={props?.labels[i]}
                 />
             ))}
         </div>

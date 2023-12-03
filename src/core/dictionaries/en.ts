@@ -10,15 +10,14 @@ export const en = {
         "Blumenau/SC · Hibrid · full-time",
         "Visit the App Nucleus"
     ],
-    hero: ["Welcome to my Portfolio...", "I'm a Full-Stack Developer"],
+    hero: ['about', 'experience', 'skills'],
+    presentation: ["Welcome to my Portfolio...", "I'm a Full-Stack Developer"],
     labels: [
         'Visit my Github to view my Projects for practices',
         'Visit my Gitlab to view my Professional Projects',
         'Visit my Linkedin to view my resume',
         "Let\'s Talk on Whatsapp"
     ],
-    skills: [
-        "Skills",
-    ],
+    skills: "Skills"
 };
 

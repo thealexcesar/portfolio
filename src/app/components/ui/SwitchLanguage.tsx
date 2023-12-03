@@ -7,9 +7,7 @@ import Link from "next/link";
 import {i18n, languageTranslations} from "../../../../i18n.config";
 import {redirectedPathName} from "@/core/utils/dictionaries";
 
-interface LangProps {
-}
-function SwitchLanguage(props: LangProps) {
+function SwitchLanguage() {
     const pathName = usePathname();
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const handleDropdownToggle = () => { setDropdownOpen(!isDropdownOpen) };
@@ -40,7 +38,7 @@ function SwitchLanguage(props: LangProps) {
                     {i18n.locales.map((locale) => (
                         <li
                             key={locale}
-                            className="py-0 px-2 cursor-pointer"
+                            className="py-0 cursor-pointer"
                             onClick={() => handleDropdownItemClick(locale)}
                         >
                             <Link href={redirectedPathName(locale)}

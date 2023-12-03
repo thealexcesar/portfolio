@@ -21,14 +21,15 @@ export const es = {
         "Blumenau/SC · Hibrido · tiempo completo",
         "Visite la aplicación Nucleus"
     ],
-    hero: ["Bienvenido a mi portafolio...", "Soy un Programador Full-Stack"],
+    hero: ['sobre', 'experiencia', 'habilidades'],
+    presentation: ["Bienvenido a mi portafolio...", "Soy un Programador Full-Stack"],
     labels: [
         'Visita mi Github para ver mis proyectos prácticos',
         'Visita mi Gitlab para ver mis proyectos profesionales',
         'Visita mi Linkedin para ver mi currículum',
         'Hablemos en Whatsapp'
     ],
-    skills: [
-        "Habilidades",
+    skill: [
+        "Habilidade",
     ],
 };

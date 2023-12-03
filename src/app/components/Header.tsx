@@ -7,10 +7,10 @@ import SwitchLanguage from "@/app/components/ui/SwitchLanguage";
 import {setThemeFromLocalStorage, toggleTheme} from "@/core/ui/theme";
 import ListLinksSocialMediaIcon from "@/app/components/ListLinksSocialMediaIcons";
 import CustomIcon from "@/app/components/CustomIcon";
-import {IDictionaries} from "@/core/interfaces/props.interface";
+import {IDictionaries} from "@/core/interfaces/idictionaries";
 
 interface HeaderProps {
-    labels: IDictionaries['labels'];
+    labels: string[];
 }
 function Header(props: HeaderProps) {
     const [currentIcon, setCurrentIcon] = useState(LuSunMoon);

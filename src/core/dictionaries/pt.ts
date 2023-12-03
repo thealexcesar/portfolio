@@ -20,7 +20,8 @@ export const pt = {
         "Blumenau/SC · Híbrido · período integral",
         "Visite o aplicativo Nucleus"
     ],
-    hero: ["Bem vindo ao meu Portfólio...", "Sou um Desenvolvedor Full-Stack."],
+    hero: ['sobre', 'experiência', 'habilidades'],
+    presentation: ["Bem vindo ao meu Portfólio...", "Sou um Desenvolvedor Full-Stack."],
     labels: [
         'Visite meu Github para ver meus projetos práticos',
         'Visite meu Gitlab para ver meus projetos profissionais',

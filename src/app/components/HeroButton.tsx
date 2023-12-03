@@ -3,11 +3,11 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 interface HeroButtonProps {
-    content: string;
+    hero: string;
     delay: number;
 }
 
-const HeroButton: React.FC<HeroButtonProps> = ({ content, delay }) => {
+const HeroButton: React.FC<HeroButtonProps> = ({ hero, delay }) => {
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
@@ -37,9 +37,9 @@ const HeroButton: React.FC<HeroButtonProps> = ({ content, delay }) => {
             transition={{ delay: 0.5 }}
             className='hero-button'
         >
-            <Link href={`#${content}`}>{content}</Link>
+            <Link href={`#${hero}`}>{hero}</Link>
         </motion.button>
     );
-};
+}
 
 export default HeroButton;
