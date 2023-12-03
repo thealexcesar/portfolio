@@ -36,7 +36,7 @@ function Page(props: PageProps) {
     }
 
     return (
-        <Layout content={translate?.content ?? []}>
+        <Layout>
             <main
                 lang={props.params?.lang}
                 className="h-screen snap snap-y snap-mandatory overflow-x-scroll scrollbar z-0
