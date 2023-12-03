@@ -6,6 +6,7 @@ import {iconMap} from "@/core/utils/IconMap";
 import {IDictionaries} from "@/core/interfaces/idictionaries";
 
 interface SkillProps {
+    onGithub: string
     skills: string
 }
 
@@ -39,7 +40,7 @@ function Skills(props: SkillProps) {
                             })}
                         </div>
                     </div>
-                    <IconsFetchGithubSkills />
+                    <IconsFetchGithubSkills onGithub={props?.onGithub} />
                 </div>
             </motion.div>
         </section>

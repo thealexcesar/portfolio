@@ -12,9 +12,10 @@ import About from "@/app/components/About";
 import Skills from "@/app/components/Skills";
 import Experience from "@/app/components/Experience";
 
-const inter = Inter({ subsets: ['latin'] });
-
-function Page(props: { params: { lang: string } }) {
+interface PageProps {
+    params: { lang: string };
+}
+function Page(props: PageProps) {
     const [translate, setTranslate] = useState<IDictionaries | null>(null);
 
     useEffect(() => {
@@ -35,7 +36,7 @@ function Page(props: { params: { lang: string } }) {
     }
 
     return (
-        <Layout>
+        <Layout content={translate?.content ?? []}>
             <main
                 lang={props.params?.lang}
                 className="h-screen snap snap-y snap-mandatory overflow-x-scroll scrollbar z-0
@@ -44,7 +45,7 @@ function Page(props: { params: { lang: string } }) {
                 <Header labels={translate?.labels ?? []} key="header" />
                 <Hero presentation={translate?.presentation ?? []} hero={translate?.hero ?? []} />
                 <About about={translate?.about ?? []} />
-                <Skills skills={translate?.skills ?? ''} />
+                <Skills skills={translate?.skills ?? ''} onGithub={translate?.onGithub ?? ''} />
                 <Experience experience={translate?.experience ?? []} skills={translate?.skills ?? ''} />
             </main>
         </Layout>
