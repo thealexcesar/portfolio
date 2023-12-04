@@ -24,7 +24,7 @@ const HeroButton: React.FC<HeroButtonProps> = ({ hero, delay }) => {
             opacity: 1,
             x: 0,
             transition: {
-                duration: 0.3,
+                duration: 0.9,
             },
         },
     };
@@ -34,7 +34,7 @@ const HeroButton: React.FC<HeroButtonProps> = ({ hero, delay }) => {
             initial="hidden"
             animate={showButton ? 'visible' : 'hidden'}
             variants={buttonVariants}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.9 }}
             className='hero-button'
         >
             <Link href={`#${hero}`}>{hero}</Link>

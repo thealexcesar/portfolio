@@ -4,6 +4,7 @@ export interface IDictionaries {
     experience?: string[];
     hero?: string[];
     labels?: string[];
+    meta?: [];
     onGithub?: string;
     presentation?: string[];
     skills?: string;

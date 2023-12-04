@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import CustomTypewriter from "./CustomTypeWriter";
-import {IDictionaries} from "@/core/interfaces/idictionaries";
 import HeroButton from "@/app/components/HeroButton";
 
 interface HeroProps {
@@ -42,7 +41,7 @@ function Hero(props: HeroProps) {
                 </div>
 
                 <div className='mx-auto max-w-7xl flex flex-wrap justify-center'>
-                    {[0.1, 0.3, 0.6].map((delay, i) => (
+                    {[0.1, 0.3, 0.6, 0.9].map((delay, i) => (
                         <HeroButton delay={delay} hero={props?.hero[i]} key={props?.hero[i]} />
                     ))}
                 </div>
