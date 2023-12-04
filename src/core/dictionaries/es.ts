@@ -31,5 +31,7 @@ export const es = {
         "Alex Cesar - Programador web full-stack y estudiante de Ingeniería informática"
     ],
     onGitHub: "Más utilizado en GitHub",
+    sendEmail: "Envíame un Correo Electrónico",
+    switchTheme: "Cambiar Tema",
     skill: "Habilidade",
 };

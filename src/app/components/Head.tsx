@@ -29,7 +29,7 @@ function Head(props: HeadProps) {
                 <meta name="og:description" content={metaTag(1)} />
                 <meta name="github" content='https://github.com/thealexcesar' />
                 <meta name="linkedin" content='https://www.linkedin.com/in/thealexcesar/' />
-                <meta property="og:image" content="/images/about.png" />
+                <meta property="og:image" content="/logo_devices.svg" />
             </head>
         </>
     )

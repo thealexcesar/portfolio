@@ -31,5 +31,7 @@ export const pt = {
     ],
     presentation: ["Bem vindo ao meu Portfólio...", "Sou um Desenvolvedor Full-Stack."],
     onGitHub: "Mais usado no GitHub",
+    sendEmail: "Envie-me um E-mnail",
+    switchTheme: "Trocar Tema",
     skills: "Habilidades",
 };

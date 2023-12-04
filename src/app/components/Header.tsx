@@ -11,6 +11,8 @@ import {IDictionaries} from "@/core/interfaces/idictionaries";
 
 interface HeaderProps {
     labels: string[];
+    sendEmail: string;
+    switchTheme: string;
 }
 function Header(props: HeaderProps) {
     const [currentIcon, setCurrentIcon] = useState(LuSunMoon);
@@ -43,16 +45,17 @@ function Header(props: HeaderProps) {
                     iconSocialMedia={MdOutgoingMail}
                     url='mailto:alex.cesar505@icloud.com'
                     iconRight={true} targetLink='_self'
-                    // ariaLabel={props.translate?.send_me_an_email  || ''}
+                    title={props?.sendEmail}
+                    ariaLabel={props?.sendEmail}
                 />
 
-                <div className='cursor-pointer flex' title='Switch theme' onClick={handleThemeToggle}> {' '}
+                <div className='cursor-pointer flex' title={props?.switchTheme} onClick={handleThemeToggle}> {' '}
                     <CustomIcon
                         iconSocialMedia={component}
                         targetLink='_self'
                         iconRight={true}
                         url={''}
-                        ariaLabel='Switch Theme'
+                        ariaLabel={props?.switchTheme}
                     />
                 </div>
 

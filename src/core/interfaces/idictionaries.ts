@@ -7,6 +7,8 @@ export interface IDictionaries {
     meta?: [];
     onGithub?: string;
     presentation?: string[];
+    sendEmail?: string;
+    switchTheme?: string;
     skills?: string;
 }
 
