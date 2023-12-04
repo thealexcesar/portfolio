@@ -19,15 +19,15 @@ function Hero(props: HeroProps) {
         <section id='hero' className='snap-start'>
             <div ref={heroRef}
                  className='h-screen flex flex-col items-center justify-center space-y-2 p-2 overflow-hidden'>
-                <span>
+                <div className='image-wrapper hero'>
                     <Image
                         src='/default_avatar.png'
                         alt="Alex's image profile"
                         height={800}
                         width={800}
-                        className='rounded-md object-contain text-center border-white-500'
+                        className='object-contain text-center'
                     />
-                </span>
+                </div>
 
                 <h2 className='text-xs uppercase tracking-[4px] mt-4'>Alex Cesar</h2>
 
