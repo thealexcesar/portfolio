@@ -28,7 +28,7 @@ function About(props: AboutProps) {
                     className='section-wrapper flex-col'
                 >
                     <h2 className='section-title mb-4'>{props?.about[0]}</h2>
-                    <div className='about-image-wrapper rounded-lg px-6 pt-0 pb-6 overflow-hidden'>
+                    <div className='image-wrapper p-6 pt-0 overflow-hidden'>
                         <Image src="/logo_devices.svg"
                                alt={props?.about[1].split(' ').slice(-2).join(' ')}
                                className="layout-image mt-8 px-0"

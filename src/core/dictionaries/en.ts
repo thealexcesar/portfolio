@@ -31,5 +31,7 @@ export const en = {
     ],
     onGithub: "Most Used on GitHub",
     presentation: ["Welcome to my Portfolio...", "I'm a Full-Stack Developer"],
+    sendEmail: "Send me an Email",
+    switchTheme: "Switch Theme",
     skills: "Skills"
 };

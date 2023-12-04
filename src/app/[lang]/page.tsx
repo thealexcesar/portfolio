@@ -41,7 +41,12 @@ function Page(props: PageProps) {
                 className="h-screen snap snap-y snap-mandatory overflow-x-scroll scrollbar z-0
                 overflow-y-scroll scrollbar-track-gray-400/20 scrollbar-thumb-gray-400/80"
             >
-                <Header labels={translate.labels || []} key="header" />
+                <Header
+                    labels={translate.labels || []}
+                    sendEmail={translate.sendEmail || ''}
+                    switchTheme={translate.switchTheme || ''}
+                    key="header"
+                />
                 <Hero presentation={translate.presentation || []} hero={translate.hero || []} key="hero" />
                 <About about={translate.about || []} />
                 <Skills skills={translate.skills || ''} onGithub={translate?.onGithub || ''} key="skills" />
