@@ -1,8 +1,12 @@
 'use client'
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import React, {useEffect, useRef} from "react";
 import CustomTypewriter from "./CustomTypeWriter";
 import HeroButton from "@/app/components/HeroButton";
+import dynamic from "next/dynamic";
+const ImageHero = dynamic(() =>
+    import("@/app/components/ImageHero").then((mod) => mod.default)
+);
 
 interface HeroProps {
     hero: string[];
@@ -12,7 +16,7 @@ interface HeroProps {
 function Hero(props: HeroProps) {
     const heroRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
-        heroRef.current && heroRef.current.scrollIntoView({ behavior: 'smooth' });
+        heroRef.current && heroRef.current.scrollIntoView({behavior: 'smooth'});
     }, []);
 
     return (
@@ -22,24 +26,10 @@ function Hero(props: HeroProps) {
                 className='h-screen flex flex-col items-center justify-center space-y-2 p-2 overflow-hidden'
             >
                 <div className='image-wrapper hero'>
-                    <Image
-                        src='/default_avatar.png'
-                        alt="Alex's avatar"
-                        height={800}
-                        width={800}
-                        className='object-contain text-center'
-                    />
+                    <ImageHero />
                 </div>
 
-                <div className='image-hero-wrapper'>
-                    <Image
-                        src='/hero.svg'
-                        alt="Alex Cesar"
-                        height={300}
-                        width={300}
-                        className='object-contain text-center'
-                    />
-                </div>
+                <h2 className='animate-pulse uppercase tracking-[4px] mt-4'>Alex Cesar</h2>
 
                 <div className='h-10 z-10 mt-4'>
                     <CustomTypewriter
@@ -50,7 +40,7 @@ function Hero(props: HeroProps) {
 
                 <div className='mx-auto max-w-7xl flex flex-wrap justify-center'>
                     {[0.1, 0.3, 0.6, 0.9].map((delay, i) => (
-                        <HeroButton delay={delay} hero={props?.hero[i]} key={`hero-button-${props?.hero[i]}`} />
+                        <HeroButton delay={delay} hero={props?.hero[i]} key={i}/>
                     ))}
                 </div>
             </div>

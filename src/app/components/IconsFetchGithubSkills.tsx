@@ -31,11 +31,11 @@ function IconsFetchGithubSkills(props: GithubProps) {
                     const iconSkill = iconMap[language];
                     // console.log(language, contributions, `${percentage.toFixed(2)}%`)
                     return iconSkill ? (
-                        <i key={language} title={`${language}: ${contributions} contributions`} className='mx-2'>
+                        <i key={`map-lang-${language}`} title={`${language}: ${contributions} contributions`} className='mx-2'>
                             <CustomIcon iconSkill={iconSkill.icon} color={iconSkill.color} />
                         </i>
                     ) : (
-                        <span key={`github-skill-${language}-${contributions}`}>{language}</span>
+                        <span key={language}>{language}</span>
                     );
                 })}
             </div>

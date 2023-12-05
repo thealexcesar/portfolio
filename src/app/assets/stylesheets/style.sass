@@ -2,7 +2,11 @@
   -----------------------------
   1.0 Reset
   2.0 Variables
+
   3.0 Mixins
+  3.1 transition
+  3.3 Theme
+
   4.0 Dark Theme
   5.0 Light Theme
  --------------------------- */
@@ -43,7 +47,8 @@ $light: #F8FAFC
   transition: $props $time $timing-function
 
 @mixin theme-styles($color, $border-color, $background-start, $background-end)
-  $darken: adjust-color($color, $lightness: -8%)
+  $darken: adjust-color($color, $lightness: -30%)
+
   body
     height: 100vh
     width: 100vw
@@ -57,7 +62,6 @@ $light: #F8FAFC
       border-color: $border-color
       color: $border-color
 
-      border
     button
       &.hero-button
         color: $color
@@ -77,16 +81,31 @@ $light: #F8FAFC
         background-color: $color
         color: $background-start
         filter: brightness(1.1)
+
     .image-hero-wrapper
       height: auto
       width: 10rem
+
     .image-wrapper
       border: 0.5px solid $color
       border-radius: 0.25rem
-      &, &img
-        background-color: $darken
+      &, &img, &.hero
+        background: linear-gradient(to top, $color, $darken)
       &.hero
+        //position: relative
         padding: 2px
+        //z-index: 1
+        //&:after
+        //  content: 'Loading...'
+        //  position: absolute
+        //  font-size: 2rem
+        //  top: 50%
+        //  left: 50%
+        //  transform: translate(-50%, -50%)
+        //  color: inherit
+        //  border-radius: 2px
+        //  z-index: -1
+        //  margin-bottom: 1rem
 /* End Mixins ---------------------------------------------------------------------------------- */
 
 /* Dark Theme

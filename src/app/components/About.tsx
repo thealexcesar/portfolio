@@ -15,7 +15,7 @@ function About(props: AboutProps) {
             transition: { duration: 0.5 },
         },
     };
-console.log("about")
+
     return (
         <section id='about' className='snap-center' lang={'pt'} >
             <article className='flex flex-col lg:flex-row items-center

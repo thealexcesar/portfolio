@@ -27,20 +27,20 @@ function Skills(props: SkillProps) {
                 <div className='flex flex-col justify-around items-center my-auto w-full'>
                     <div className="skills-wrapper">
                         <div className='skills-content'>
-                            {Skills.map((skill, index) => {
+                            {Skills.map((skill, i) => {
                                 const iconSkill = iconMap[skill];
 
                                 return iconSkill ? (
-                                    <i key={index} title={skill} className='mx-2'>
+                                    <i key={i} title={skill} className='mx-2'>
                                         <CustomIcon iconSkill={iconSkill.icon} color={iconSkill.color}/>
                                     </i>
                                 ) : (
-                                    <span key={skill}>{skill}</span>
+                                    <span>{skill}</span>
                                 );
                             })}
                         </div>
                     </div>
-                    <IconsFetchGithubSkills onGithub={props?.onGithub} key='icons-fetch-github-skills' />
+                    <IconsFetchGithubSkills onGithub={props?.onGithub} />
                 </div>
             </motion.div>
         </section>

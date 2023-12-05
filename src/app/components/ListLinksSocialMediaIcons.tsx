@@ -23,7 +23,7 @@ function ListLinksSocialMediaIcon(props: LinksProps) {
             {customIcons.iconSocialMedias.map((icon, i) => (
                 <CustomIcon
                     iconSocialMedia={icon}
-                    key={`custom-icon-${i}`}
+                    key={i}
                     url={customIcons.urlPaths[i]}
                     color={customIcons.colors[i]}
                     ariaLabel={props?.labels[i]}

@@ -24,7 +24,7 @@ export const es = {
         'Visita mi Linkedin para ver mi currículum',
         'Hablemos en Whatsapp'
     ],
-    meta: [
+    metadata: [
         "Portafolio de Alex",
         "Alex Cesar - Desarrollador Web Full-Stack",
         "Ciencia de la Computación, Ingeniero en Computación."
