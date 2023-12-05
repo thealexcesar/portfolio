@@ -5,7 +5,7 @@
 ---
 
 ### Release
-**0.0.3**
+**0.04**
 
 ## View Live Demo
 Check out the live version of this portfolio [here](https://alexcesar.dev).
@@ -62,7 +62,7 @@ GITHUB_TOKEN=<your_github_token_value_here>
 
 Alternatively, you can use the following command to create the file and append the key:
 ```bash
-touch .env.local && echo 'GITHUB_TOKEN=your_github_token_value_here' >> .env.local
+echo 'GITHUB_TOKEN=your_github_token_value_here' >> .env.local
 ```
 Be cautious not to share your API keys publicly to ensure the security of your account.
 

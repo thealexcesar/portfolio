@@ -18,7 +18,6 @@ export const es = {
         "Visite la aplicación Nucleus"
     ],
     hero: ['sobre', 'experiencia', 'habilidades', 'experiencia'],
-    presentation: ["Bienvenido a mi portafolio...", "Soy un Programador Full-Stack"],
     labels: [
         'Visita mi Github para ver mis proyectos prácticos',
         'Visita mi Gitlab para ver mis proyectos profesionales',
@@ -26,12 +25,13 @@ export const es = {
         'Hablemos en Whatsapp'
     ],
     meta: [
-        "Alex | portfolio",
-        "Programador Web ",
-        "Alex Cesar - Programador web full-stack y estudiante de Ingeniería informática"
+        "Portafolio de Alex",
+        "Alex Cesar - Desarrollador Web Full-Stack",
+        "Ciencia de la Computación, Ingeniero en Computación."
     ],
-    onGitHub: "Más utilizado en GitHub",
+    onGithub: "Más utilizado en GitHub",
+    presentation: ["Bienvenido a mi portafolio...", "Soy un Programador Full-Stack"],
     sendEmail: "Envíame un Correo Electrónico",
-    switchTheme: "Cambiar Tema",
     skill: "Habilidade",
+    switchTheme: "Cambiar Tema",
 };

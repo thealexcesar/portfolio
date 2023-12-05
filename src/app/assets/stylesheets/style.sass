@@ -43,6 +43,7 @@ $light: #F8FAFC
   transition: $props $time $timing-function
 
 @mixin theme-styles($color, $border-color, $background-start, $background-end)
+  $darken: adjust-color($color, $lightness: -8%)
   body
     height: 100vh
     width: 100vw
@@ -76,9 +77,14 @@ $light: #F8FAFC
         background-color: $color
         color: $background-start
         filter: brightness(1.1)
+    .image-hero-wrapper
+      height: auto
+      width: 10rem
     .image-wrapper
-      border: 1px solid $color
-      border-radius: 0.5rem
+      border: 0.5px solid $color
+      border-radius: 0.25rem
+      &, &img
+        background-color: $darken
       &.hero
         padding: 2px
 /* End Mixins ---------------------------------------------------------------------------------- */
