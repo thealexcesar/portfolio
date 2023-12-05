@@ -37,7 +37,7 @@ function SwitchLanguage() {
                 <motion.ul className="absolute top-full right-0 dropdown mt-1">
                     {i18n.locales.map((locale) => (
                         <li
-                            key={locale}
+                            key={`component-switch-lang-=${locale}`}
                             className="py-0 cursor-pointer"
                             onClick={() => handleDropdownItemClick(locale)}
                         >

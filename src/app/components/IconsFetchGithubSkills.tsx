@@ -27,7 +27,7 @@ function IconsFetchGithubSkills(props: GithubProps) {
         <div className={'skills-wrapper h-3/6 mt-12'}>
             <h3 className='skills-subtitle uppercase'>{props?.onGithub}</h3>
             <div className='skills-content'>
-                {languages.map(({ language, contributions, percentage }) => {
+                {languages.map(({ language, contributions, percentage}) => {
                     const iconSkill = iconMap[language];
                     // console.log(language, contributions, `${percentage.toFixed(2)}%`)
                     return iconSkill ? (
@@ -35,7 +35,7 @@ function IconsFetchGithubSkills(props: GithubProps) {
                             <CustomIcon iconSkill={iconSkill.icon} color={iconSkill.color} />
                         </i>
                     ) : (
-                        <span key={language}>{language}</span>
+                        <span key={`github-skill-${language}-${contributions}`}>{language}</span>
                     );
                 })}
             </div>

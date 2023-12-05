@@ -26,12 +26,12 @@ export const en = {
     ],
     meta: [
         "Alex's Portfolio",
-        "Web Developer ",
-        "Alex Cesar - Full-Stack Web Developer and Computer Engineering student"
+        "Alex Cesar - Full-Stack Web Developer",
+        "Computer Science, Computer Engineer."
     ],
     onGithub: "Most Used on GitHub",
     presentation: ["Welcome to my Portfolio...", "I'm a Full-Stack Developer"],
     sendEmail: "Send me an Email",
-    switchTheme: "Switch Theme",
-    skills: "Skills"
+    skills: "Skills",
+    switchTheme: "Switch Theme"
 };

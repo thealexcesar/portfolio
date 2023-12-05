@@ -15,9 +15,9 @@ function About(props: AboutProps) {
             transition: { duration: 0.5 },
         },
     };
-
+console.log("about")
     return (
-        <section key={props?.about[0]} id='about' className='snap-center' lang={'pt'} >
+        <section id='about' className='snap-center' lang={'pt'} >
             <article className='flex flex-col lg:flex-row items-center
               justify-center text-center px-4 md:px-10 lg:px-20 pt-16'
             >

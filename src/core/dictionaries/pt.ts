@@ -25,13 +25,13 @@ export const pt = {
         'Vamos conversar no Whatsapp'
     ],
     meta: [
-        "Alex | Portfólio",
-        "Desenvolvedor Web ",
-        "Alex Cesar - Desenvolvedor web full-stack e estudante de Engenharia da Computação"
+        "Portfólio de Alex",
+        "Alex Cesar - Desenvolvedor Web Full-Stack",
+        "Ciência da Computação, Engenheiro de Computação."
     ],
+    onGithub: "Mais usado no GitHub",
     presentation: ["Bem vindo ao meu Portfólio...", "Sou um Desenvolvedor Full-Stack."],
-    onGitHub: "Mais usado no GitHub",
     sendEmail: "Envie-me um E-mnail",
-    switchTheme: "Trocar Tema",
     skills: "Habilidades",
+    switchTheme: "Trocar Tema",
 };

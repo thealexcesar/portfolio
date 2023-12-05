@@ -37,7 +37,7 @@ function Header(props: HeaderProps) {
          max-w-7xl mx-auto xl:items-center justify-between text-2xl'
         >
 
-            <ListLinksSocialMediaIcon labels={props?.labels} />
+            <ListLinksSocialMediaIcon labels={props?.labels} key={`list-links-${props?.labels}`} />
 
             <div className='flex justify-end space-x-2'>
 
@@ -46,7 +46,7 @@ function Header(props: HeaderProps) {
                     url='mailto:alex.cesar505@icloud.com'
                     iconRight={true} targetLink='_self'
                     title={props?.sendEmail}
-                    ariaLabel={props?.sendEmail}
+                    ariaLabel={`custom-icon-send-mail-${props?.sendEmail}`}
                 />
 
                 <div className='cursor-pointer flex' title={props?.switchTheme} onClick={handleThemeToggle}> {' '}
@@ -56,10 +56,11 @@ function Header(props: HeaderProps) {
                         iconRight={true}
                         url={''}
                         ariaLabel={props?.switchTheme}
+                        key={`custom-icon-switch-theme-${props?.switchTheme}`}
                     />
                 </div>
 
-                <CustomIcon iconSocialMedia={SwitchLanguage} iconRight={true} isBtn={true} />
+                <CustomIcon iconSocialMedia={SwitchLanguage} iconRight={true} isBtn={true} key={`custom-icon-switch-lang`}/>
 
             </div>
         </header>

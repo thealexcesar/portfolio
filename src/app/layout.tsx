@@ -12,7 +12,7 @@ function Layout({ children }: { children: React.ReactNode }) {
     const language: string = pathName.split("/")[1] || 'pt';
 
     return (
-        <html lang={language} data-theme="light">
+        <html lang={language} data-theme="light" key='root-layout'>
             <body className={inter.className}>{children}</body>
         </html>
     );

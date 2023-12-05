@@ -6,11 +6,11 @@
  preserveAspectRatio="xMidYMid meet">
 <defs>
     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" style="stop-color:#cbd5e1;stop-opacity:1">
-            <animate attributeName="stop-color" values="#cbd5e1;#334155;#cbd5e1" dur="5s" repeatCount="indefinite" />
+        <stop offset="0%" style="stop-color:#e2e8f0;stop-opacity:1">
+            <animate attributeName="stop-color" values="#e2e8f0;#0f172a;#e2e8f0" dur="5s" repeatCount="indefinite" />
         </stop>
         <stop offset="100%" style="stop-color:black;stop-opacity:1">
-            <animate attributeName="stop-color" values="#334155;#cbd5e1;#334155" dur="5s" repeatCount="indefinite" />
+            <animate attributeName="stop-color" values="#0f172a;#e2e8f0;#0f172a" dur="5s" repeatCount="indefinite" />
         </stop>
     </linearGradient>
 </defs>

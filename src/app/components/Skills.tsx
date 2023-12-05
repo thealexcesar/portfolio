@@ -40,7 +40,7 @@ function Skills(props: SkillProps) {
                             })}
                         </div>
                     </div>
-                    <IconsFetchGithubSkills onGithub={props?.onGithub} />
+                    <IconsFetchGithubSkills onGithub={props?.onGithub} key='icons-fetch-github-skills' />
                 </div>
             </motion.div>
         </section>

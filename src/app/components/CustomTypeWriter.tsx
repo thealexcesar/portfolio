@@ -46,7 +46,7 @@ const CustomTypewriter: React.FC<Props> = (
         animation: '1s step-end infinite',
     };
 
-    return <h2 className={classes} style={cursorStyle}> {currentText} </h2>;
+    return <h1 className={classes} style={cursorStyle}> {currentText} </h1>;
 }
 
 export default CustomTypewriter;
