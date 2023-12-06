@@ -24,11 +24,6 @@ export const es = {
         'Visita mi Linkedin para ver mi currículum',
         'Hablemos en Whatsapp'
     ],
-    metadata: [
-        "Portafolio de Alex",
-        "Alex Cesar - Desarrollador Web Full-Stack",
-        "Ciencia de la Computación, Ingeniero en Computación."
-    ],
     onGithub: "Más utilizado en GitHub",
     presentation: ["Bienvenido a mi portafolio...", "Soy un Programador Full-Stack"],
     sendEmail: "Envíame un Correo Electrónico",

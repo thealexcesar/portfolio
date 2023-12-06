@@ -1,24 +1,27 @@
-'use client'
 import React from "react";
-import { usePathname } from "next/navigation";
 import { Inter } from 'next/font/google';
 import '@/app/assets/stylesheets/style_tailwind.css';
 import '@/app/assets/stylesheets/style.sass';
-import {useReportWebVitals} from "next/web-vitals";
-
+import {Metadata} from "next";
+import {headers} from "next/headers";
 const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+    applicationName: "Alex's Portfolio",
+    category: 'Desenvolvimento Web',
+    creator: 'Alex Cesar',
+    classification: 'Programador - Profissional de TI - Desenvolvedor Full-Stack - Back-end, Front-end',
+    description: 'Desenvolvedor Web Full-Stack',
+    generator: 'next.js/^14.0.3',
+    keywords: 'Back-end, Front-end, Ruby on Rails, PostgreSQL, SASS, JavaScript, TypeScript, JQuery, React, SQL, NoSQL, Java, Ciência da Computação, Engenheiro de Computação.',
+    referrer: 'origin',
+    title: 'Alex - Portfolio'
+};
 
 function Layout({ children }: { children: React.ReactNode }) {
 
-    useReportWebVitals((metric) => {
-        console.log(metric)
-    })
-
-    const pathName: string = usePathname();
-    const language: string = pathName.split("/")[1] || 'pt';
-
     return (
-        <html lang={language} data-theme="light">
+        <html data-theme="light">
             <body className={inter.className}>{children}</body>
         </html>
     );

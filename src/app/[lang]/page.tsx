@@ -4,6 +4,7 @@ import {IDictionaries} from "@/core/interfaces/idictionaries";
 import {getDictionary} from "@/core/utils/dictionaries";
 import dynamic from "next/dynamic";
 import Hero from "@/app/components/Hero";
+import Head from "next/head";
 
 const Header = dynamic(() =>
     import("@/app/components/Header").then((mod) => mod.default)
@@ -52,9 +53,9 @@ function Page(props: PageProps) {
 
     return (
         <>
-            <HeadComponent metadata={translate.metadata || []}/>
+            <html lang={props.params?.lang}></html>
             <main
-                lang={props.params?.lang}
+
                 className="h-screen snap snap-y snap-mandatory overflow-x-scroll scrollbar z-0
                 overflow-y-scroll scrollbar-track-gray-400/20 scrollbar-thumb-gray-400/80"
             >
@@ -86,7 +87,7 @@ function Page(props: PageProps) {
                 />
             </main>
         </>
-    );
+    )
 }
 
 export default Page;
