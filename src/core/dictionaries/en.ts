@@ -24,11 +24,6 @@ export const en = {
         'Visit my Linkedin to view my resume',
         "Let\'s Talk on Whatsapp"
     ],
-    metadata: [
-        "Alex's Portfolio",
-        "Alex Cesar - Full-Stack Web Developer",
-        "Computer Science, Computer Engineer."
-    ],
     onGithub: "Most Used on GitHub",
     presentation: ["Welcome to my Portfolio...", "I'm a Full-Stack Developer"],
     sendEmail: "Send me an Email",
