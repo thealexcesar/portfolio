@@ -8,6 +8,10 @@
 **0.05**
 
 ## View Live Demo
+<a href="https://alexcesar.dev" target="_blank" title="Check out the live version of this portfolio">
+  <img src="public/lighthouse.png" alt="Check out the live version of this portfolio" style="width: 50%;" />
+</a>
+
 Check out the live version of this portfolio [here](https://alexcesar.dev).
 
 [//]: # (TODO ADD IMAGE)
